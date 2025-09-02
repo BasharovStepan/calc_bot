@@ -3,7 +3,7 @@ from telebot import types
 
 import texts
 from calculator import count_cal_norm
-from src.config import *
+from config import *
 
 
 # Telegram session
