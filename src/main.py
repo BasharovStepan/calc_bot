@@ -3,7 +3,7 @@ from telebot import types
 
 import texts
 from calculator import count_cal_norm
-from  config import *
+from src.config import *
 
 
 # Telegram session
@@ -84,6 +84,8 @@ def handle_all_messages(message):
 @bot.callback_query_handler(func=lambda call: True)
 def answer(call):
     user_id = call.message.chat.id
+
+    bot.delete_message(call.message.chat.id, call.message.message_id)
 
     # Activeness coefficient
     if call.data in {'cef12', 'cef13', 'cef15', 'cef17'}:
