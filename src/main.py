@@ -26,14 +26,14 @@ cef12 = types.InlineKeyboardButton(text=texts.cef12, callback_data='cef12')
 cef13 = types.InlineKeyboardButton(text=texts.cef13, callback_data='cef13')
 cef15 = types.InlineKeyboardButton(text=texts.cef15, callback_data='cef15')
 cef17 = types.InlineKeyboardButton(text=texts.cef17, callback_data='cef17')
-activeness_cef_keyboard.add(cef12, cef15, cef17, cef13, row_width=1)
+activeness_cef_keyboard.add(cef12, cef13, cef15, cef17, row_width=1)
 
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
     user_id = message.from_user.id
     user_states[user_id] = 'weight'
-    bot.send_message(message.chat.id, texts.intro)
+#    bot.send_message(message.chat.id, texts.intro)
     bot.send_message(message.chat.id, texts.weight)
 
 
