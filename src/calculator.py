@@ -8,5 +8,4 @@ def count_cal_norm(weight, height, age, activeness_cef, is_male):
 
     result *= activeness_cef
     result = round(result)
-
     return result
