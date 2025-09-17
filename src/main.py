@@ -3,7 +3,7 @@ from telebot import types
 
 import texts
 from calculator import count_cal_norm
-from src.config import *
+from config import *
 
 
 # Telegram session
@@ -33,7 +33,7 @@ activeness_cef_keyboard.add(cef12, cef15, cef17, cef13, row_width=1)
 def handle_start(message):
     user_id = message.from_user.id
     user_states[user_id] = 'weight'
-    bot.send_message(message.chat.id, texts.intro)
+#    bot.send_message(message.chat.id, texts.intro)
     bot.send_message(message.chat.id, texts.weight)
 
 
